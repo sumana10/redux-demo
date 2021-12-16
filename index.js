@@ -1,5 +1,5 @@
 const redux = require('redux')
-const createstore = redux.createStore
+const createStore = redux.createStore
 const combineReducers = redux.combineReducers
 // console.log("Redux demo");
 
@@ -7,7 +7,7 @@ const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
 
 //Action is an js object with type property
-
+//state is read only be transformed by action
 //An action creator returns an action
 
 function buyCake(){
@@ -51,6 +51,7 @@ const initialIceCreamState = {
 //   }
 
 // }
+//pure reducer to transform state by action
 const cakeReducer = (state = initialCakeState, action) =>{
   switch(action.type){
 
@@ -79,13 +80,16 @@ const rootReducer = combineReducers({
   cake: cakeReducer,
   iceCream: iceCreamReducer
 })
-const store = redux.createStore(rootReducer)
+//accepts an object
+//holding the application state
+const store = createStore(rootReducer)
 
-//return state
+//return current state
 console.log('Initial state', store.getState());
 //set up listener whenever there is a change in state it'll console the state
 const unsubscribe = store.subscribe(()=> console.log('Updated state', store.getState()))
 //dispatch the action
+//dipatch method accept an action as it's parameter
 store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyCake())
