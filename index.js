@@ -89,7 +89,7 @@ console.log('Initial state', store.getState());
 //set up listener whenever there is a change in state it'll console the state
 const unsubscribe = store.subscribe(()=> console.log('Updated state', store.getState()))
 //dispatch the action
-//dipatch method accept an action as it's parameter
+//dipatch method accept an action creator as it's parameter
 store.dispatch(buyCake())
 store.dispatch(buyCake())
 store.dispatch(buyCake())
