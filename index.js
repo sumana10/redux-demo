@@ -1,6 +1,9 @@
 const redux = require('redux')
+const reduxLogger = require('redux-logger')
+const logger = reduxLogger.createLogger()
 const createStore = redux.createStore
 const combineReducers = redux.combineReducers
+const applyMiddleware = redux.applyMiddleware
 // console.log("Redux demo");
 
 const BUY_CAKE = 'BUY_CAKE'
@@ -82,12 +85,14 @@ const rootReducer = combineReducers({
 })
 //accepts an object
 //holding the application state
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 //return current state
 console.log('Initial state', store.getState());
 //set up listener whenever there is a change in state it'll console the state
-const unsubscribe = store.subscribe(()=> console.log('Updated state', store.getState()))
+// const unsubscribe = store.subscribe(()=> console.log('Updated state', store.getState()))
+const unsubscribe = store.subscribe(()=> {})
+// see all the logs
 //dispatch the action
 //dipatch method accept an action creator as it's parameter
 store.dispatch(buyCake())
