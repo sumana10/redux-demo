@@ -1,7 +1,7 @@
 {
   "name": "redux-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "redux practice code",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,14 @@
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumana10/redux-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumana10/redux-demo/issues"
+  },
+  "homepage": "https://github.com/sumana10/redux-demo#readme"
 }

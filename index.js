@@ -1,8 +1,12 @@
 const redux = require('redux')
+
+//Middleware
 const reduxLogger = require('redux-logger')
 const logger = reduxLogger.createLogger()
+
 const createStore = redux.createStore
 const combineReducers = redux.combineReducers
+
 const applyMiddleware = redux.applyMiddleware
 // console.log("Redux demo");
 
@@ -83,6 +87,7 @@ const rootReducer = combineReducers({
   cake: cakeReducer,
   iceCream: iceCreamReducer
 })
+
 //accepts an object
 //holding the application state
 const store = createStore(rootReducer, applyMiddleware(logger))
