@@ -1,7 +1,14 @@
 const redux = require('redux');
+
 const createStore = redux.createStore;
+
+//to use middleware
 const applyMiddleware = redux.applyMiddleware 
+
+//define async action creator
 const thunkMiddleware = require('redux-thunk').default
+
+//request to an api end point
 const axios = require('axios')
 
 const initialState = {
