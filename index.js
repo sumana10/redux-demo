@@ -13,7 +13,7 @@ const applyMiddleware = redux.applyMiddleware
 const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
 
-//Action is an js object with type property
+//Action is an js object with type property.
 //state is read only be transformed by action
 //An action creator returns an action
 
