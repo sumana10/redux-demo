@@ -108,15 +108,15 @@ store.dispatch(buyIceCream())
 
 unsubscribe()
 
-// create a store
+// define your action and action creator
 
 // declare the initial state and reducer
 
-// define your action and action creator
-
-// subscribe to the store
+// create a store
 
 // dispatch to the action to update the store
+
+// subscribe to the store
 
 // finally unsubscribe to the changes
 
